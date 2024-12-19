@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello, Darling!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom right, #ff7eb3, #ff758c);
+            color: white;
+            text-align: center;
+        }
+        header {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 1em;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        .container {
+            padding: 2em;
+        }
+        .button {
+            margin-top: 1.5em;
+            padding: 0.7em 1.5em;
+            font-size: 1.2em;
+            background-color: #ff6584;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .button:hover {
+            background-color: #ff4a6e;
+        }
+        .question {
+            display: none;
+        }
+        .question.active {
+            display: block;
+            margin-top: 2em;
+        }
+        .question button {
+            margin: 0.5em;
+            padding: 0.7em 1.5em;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .yes {
+            background-color: #4caf50;
+            color: white;
+        }
+        .no {
+            background-color: #f44336;
+            color: white;
+        }
+        .decorations {
+            margin-top: 2em;
+        }
+        .decorations img {
+            width: 150px;
+            margin: 0.5em;
+        }
+        .ring {
+            display: inline-block;
+            margin-top: 1em;
+            animation: spin 3s linear infinite;
+        }
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Hello, Darling! Welcome!</h1>
+    </header>
+    <div class="container">
+        <a class="button" id="proceed">Proceed</a>
+        <div class="question" id="question">
+            <h2>Can I be your husband?</h2>
+            <div class="decorations">
+                <img src="https://media.tenor.com/images/e1f9b7b3e8bb4b048ba62a82fc91e4a6/tenor.gif" alt="Cute Hamster Meme">
+                <img src="https://media.tenor.com/images/96e66d8cbee0b0a7336ad09b6b1f9f68/tenor.gif" alt="Rotating Flower GIF">
+                <img src="https://media.tenor.com/images/21ff6a8d51f3f1c3331fcaa7354bb4d1/tenor.gif" alt="Puppy Holding Heart GIF">
+                <img src="https://media.tenor.com/images/4b1e7c14b8b32c8c3d5e2e865896af37/tenor.gif" alt="Smiling Cat GIF">
+                <img src="https://media.tenor.com/images/aaf5ae5f73bb96ec1c1acdf5b8508c4b/tenor.gif" alt="Penguin Love GIF">
+                <div class="ring">
+                    <img src="https://media.tenor.com/images/2d8f9e23ef8b4cfb68dd3fa8e37b7453/tenor.gif" alt="Rotating Ring GIF">
+                </div>
+            </div>
+            <button class="yes">Yes</button>
+            <button class="no">No</button>
+        </div>
+    </div>
+    <script>
+        const proceedButton = document.getElementById('proceed');
+        const questionDiv = document.getElementById('question');
+
+        proceedButton.addEventListener('click', () => {
+            proceedButton.style.display = 'none';
+            questionDiv.classList.add('active');
+        });
+    </script>
+</body>
+</html>
